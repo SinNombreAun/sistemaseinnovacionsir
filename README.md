@@ -1,6 +1,3 @@
-# Carousel de Películas Estilo NETFLIX con HTML5, CSS3 y Javascript.
-### [Tutorial: https://youtu.be/1ukG4FTmdWQ](https://youtu.be/1ukG4FTmdWQ)
+#SIR (Sistemas e Innovación de Recursos) 
 
-![Carousel de Películas Estilo NETFLIX con HTML5, CSS3 y Javascript.](https://raw.githubusercontent.com/falconmasters/p-gina-estilo-netflix/carousel/img/thumb.png)
-
-Por: [FalconMasters](http://www.falconmasters.com)
+Somos un grupo de desarrollo de software a la medida dedicada a ayudar a dueños y directores de empresas a crear soluciones para controlar de forma efectiva la operación de sus negocios. Desarrollamos sistemas de acuerdo a las necesidades de tu empresa con un servicio personalizado, integral y continuo.
