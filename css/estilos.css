@@ -1,0 +1,233 @@
+:root {
+    /* Variables de colores para logo y fondo*/
+    --rojo: #E50914;
+    --fondo: #141414; 
+}
+/* selector universal " *{ } " */
+*{
+    /* eliminar margenes predeterminados por el navegador*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Se agrega el color de la variable "fondo" al body */
+body {
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+/* Variable de contenedor de ancho de 90% y un margen automatico*/
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+header{
+    padding: 30px 0;
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo{
+    /*tipo de letra*/
+    font-family: 'Bebas Neue', cursive;
+    /*Quitamos las negritas*/
+    font-weight: normal;
+    /*color de la letra usando la variable rojo*/
+    color: var(--rojo);
+    /*Tamaño de la fuente*/
+    font-size: 40px;
+}
+header nav a {
+    /*color gris claro para el menu*/
+    color: #AAA;
+    /*anulamos el subrayado del menu*/
+    text-decoration: none;
+    /*colocamos un margen de 20px*/
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: #FFF;
+}
+/*-----  Imagen Para la pagina Principal  -----*/
+.pagina-principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #FFF;
+    background: linear-gradient(rgba(0,0,0, .50) 0%, rgba(0,0,0,.50)100%), url(../img/LogoKuup.jpeg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+.pagina-principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+
+.pagina-principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pagina-principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.pagina-principal .boton{
+    background: rgba(0,0,0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+/* Efecto para el boton cuando pase el cursor soble el */
+.pagina-principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+
+/* Margen para el boton y separar el icono del texto */
+.pagina-principal .boton i{
+    margin-right: 1.25em;
+}
+
+/*Contenedor modulos y controles del carrusel*/
+.contenedor-modulos-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.contenedor-modulos-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.contenedor-modulos-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}     
+
+.contenedor-modulos-controles .indicadores button:hover,
+.contenedor-modulos-controles .indicadores button.activo {
+    background: red;
+}
+
+/* Contenedor principal y flechas*/
+.modulos-kuup .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos para las flechas del carrusel */
+.modulos-kuup .contenedor-principal .flecha-izquierda,
+.modulos-kuup .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0, .3);
+    font-size: 40px;
+    height: 50%;
+    top: clac(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.modulos-kuup .contenedor-principal .flecha-izquierda:hover,
+.modulos-kuup .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0,0,0, .9);
+}
+
+.modulos-kuup .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
+.modulos-kuup .contenedor-principal .flecha-derecha {
+    right: 0;
+}
+/* Carrusel: edicion de margenes y formatos del carrucel */
+.modulos-kuup .contenedor-principal .contenedor-carrusel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden /*recuerda que tienes que eliminar scroll y regresar a esto hidden*/;
+    scroll-behavior: smooth;
+}
+/* Carrusel: edicion de el display y acomedar las imagenes de manera horizontal */
+.modulos-kuup .contenedor-principal .carrusel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* Carrusel: edicion de el display y acomedar las imagenes de manera horizontal */
+.modulos-kuup .contenedor-principal .carrusel .modulo {
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+/* Carrusel: edicion de el display y acomedar las imagenes de manera horizontal */
+.modulos-kuup .contenedor-principal .carrusel .modulo.hover {
+transform: scale(1.2);
+transform-origin: center;
+}
+/* Carrusel: edicion de el display y acomedar las imagenes de manera horizontal */
+.modulos-kuup .contenedor-principal .carrusel .modulo img {
+    width: 100%;
+    vertical-align: top;
+}
+/* Media Queries para hacer responsivo el menu de contenido, el logo y la pagina principal */
+@media screen and (max-width: 800px){
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pagina-principal {
+        font-size: 14px;
+    }
+
+    .pagina-principal .descripcion {
+        max-width: 100%;
+    }
+    .modulos-kuup .contenedor-principal {
+        overflow: visible;
+    }
+    .modulos-kuup .contenedor-principal .carrusel{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .modulos-kuup .indicadores,
+    .modulos-kuup .flecha-izquierda,
+    .modulos-kuup .flecha-derecha {
+        display: none;
+    }
+
+}
